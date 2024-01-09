@@ -4,7 +4,11 @@ import {RegistrationDto} from "./registration.dto";
 @Injectable()
 export class RegistrationService {
 
-    public registerNewUser(resgistrationForm: RegistrationDto): any {
-        return resgistrationForm
+
+    async registerNewUser(resgistrationForm: RegistrationDto): Promise<RegistrationDto> {
+        const myPromise: Promise<RegistrationDto> = new Promise((resolve, reject) => {
+            resolve(resgistrationForm)
+        });
+        return myPromise
     }
 }
