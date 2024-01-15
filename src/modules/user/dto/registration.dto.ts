@@ -4,5 +4,6 @@ export class RegistrationDto {
     firstName: string;
     lastName: string;
     phone: string;
-    cloudProvider: string
+    cloudProvider: string;
+    salt: string;
 }
